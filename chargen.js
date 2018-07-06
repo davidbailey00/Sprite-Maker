@@ -76,6 +76,12 @@ $(document).ready(function() {
         $("#chooser>ul ul").hide('slow');
         $("#chooser>ul span.expanded").removeClass("expanded").addClass("condensed");
     });
+    $("#expand").click(function() {
+        const $ul = $('#chooser>ul ul');
+        $ul.show('slow');
+        $("#chooser>ul span.expanded").addClass("expanded").removeClass("condensed");
+        drawPreviews($ul);
+    });
 
     // Redraw afer reset
     $("input[type=reset]").click(function() {
