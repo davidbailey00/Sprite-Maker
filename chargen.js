@@ -55,7 +55,8 @@ $(document).ready(function() {
         if (!($(event.target).get(0).tagName == "LABEL")) {
             $(this).children("span").toggleClass("condensed").toggleClass("expanded");
             var $ul = $(this).children("ul");
-            $ul.toggle('slow').promise().done(drawPreviews);
+            $ul.toggle('slow');
+            drawPreviews($ul);
         }
         event.stopPropagation();
     });
@@ -65,7 +66,8 @@ $(document).ready(function() {
     $("#chooser>ul>li").click(function(event) {
         $(this).children("span").toggleClass("condensed").toggleClass("expanded");
         var $ul = $(this).children("ul");
-        $ul.toggle('slow').promise().done(drawPreviews);
+        $ul.toggle('slow');
+        drawPreviews($ul);
         event.stopPropagation();
     });
 
@@ -398,10 +400,8 @@ $(document).ready(function() {
     redraw();
 
     // Draw preview images
-    function drawPreviews() {
-        this.find("input[type=radio], input[type=checkbox]").filter(function() {
-            return $(this).is(":visible");
-        }).each(function() {
+    function drawPreviews($ul) {
+        $ul.find("input[type=radio], input[type=checkbox]").filter(':visible').each(function() {
             if (!$(this).parent().hasClass("hasPreview")) {
                 var prev = document.createElement("canvas");
                 var oversize = $(this).data("oversize");
