@@ -114,7 +114,6 @@ $(document).ready(function() {
         canvas.width = 832;
         canvas.height = 1344;
     }
-    $("#chooser>ul").css("height", canvas.height);
 
     // called each time redrawing
     function redraw() {
@@ -136,7 +135,6 @@ $(document).ready(function() {
             canvas.width = 832;
             canvas.height = 1344;
         }
-        $("#chooser>ul").css("height", canvas.height);
         oversize = !!oversize;
 
         // non oversize elements

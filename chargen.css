@@ -8,11 +8,10 @@
 
 body {
     margin: 10px 15px;
-	min-width: 1280px;
 }
 
 header {
-	width: 640px;
+    width: 640px;
 }
 
 h1 {
@@ -33,14 +32,6 @@ p {
 
 .subtitle {
 	padding-left: 50px;
-}
-
-#save {
-    width: 60%;
-    min-width: 832px;
-    margin: 40px 0;
-    float: right;
-	padding-left: 15px;
 }
 
 #source {
@@ -73,7 +64,8 @@ input[type=button], input[type=reset] {
 
 #preview {
     width: 60%;
-    min-width: 832px;
+    height: calc(100vh - 170px);
+    overflow: auto;
     float: right;
 }
 
@@ -96,7 +88,7 @@ ul {
 }
 
 #chooser>ul {
-	height: 1344px;
+	height: calc(100vh - 305px);
 	overflow-y: auto;
 }
 
