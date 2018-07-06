@@ -79,7 +79,7 @@ $(document).ready(function() {
     $("#expand").click(function() {
         const $ul = $('#chooser>ul ul');
         $ul.show('slow');
-        $("#chooser>ul span.expanded").addClass("expanded").removeClass("condensed");
+        $("#chooser>ul span.condensed").addClass("expanded").removeClass("condensed");
         drawPreviews($ul);
     });
 
