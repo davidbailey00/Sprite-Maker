@@ -315,6 +315,7 @@ $(document).ready(function() {
         const ctx = canvas.getContext('2d');
         ctx.imageSmoothingEnabled = false;
 
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < 4; i += 1) {
             ctx.drawImage(sourceCanvas, 0, 512 + 64*i, 576, 64, 1152*i, 0, 1152, 128);
         }
