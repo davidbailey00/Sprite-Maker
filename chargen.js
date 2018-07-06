@@ -97,6 +97,9 @@ $(document).ready(function() {
     $("#saveAsPNG").click(function() {
         renameImageDownload(this, canvas, 'Download.png');
     });
+    $('#orthoSave').click(function() {
+        renameImageDownload(this, document.querySelector('#custom-spritesheet'), 'Sprites.png');
+    })
 
     // Determine if an oversize element used
     var oversize = $("input[type=radio]").filter(function() {
@@ -303,6 +306,18 @@ $(document).ready(function() {
                 }
             }
         });
+
+        customDraw(canvas);
+    }
+
+    function customDraw(sourceCanvas) {
+        const canvas = document.querySelector('#custom-spritesheet');
+        const ctx = canvas.getContext('2d');
+        ctx.imageSmoothingEnabled = false;
+
+        for (let i = 0; i < 4; i += 1) {
+            ctx.drawImage(sourceCanvas, 0, 512 + 64*i, 576, 64, 1152*i, 0, 1152, 128);
+        }
     }
 
     // Change checkboxes based on parameters
