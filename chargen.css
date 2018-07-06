@@ -4,10 +4,21 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     margin: 10px 15px;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 
 header {
@@ -64,9 +75,10 @@ input[type=button], input[type=reset] {
 
 #preview {
     width: 60%;
-    height: calc(100vh - 170px);
+    height: calc(100vh - 202px);
     overflow: auto;
     float: right;
+    background-color: rgba(255,255,255,0.67);
 }
 
 p.instr {
@@ -87,9 +99,13 @@ ul {
     list-style-type: none;
 }
 
+#chooser {
+    background-color: rgba(255,255,255,0.67);
+}
+
 #chooser>ul {
-	height: calc(100vh - 305px);
-	overflow-y: auto;
+	height: calc(100vh - 360px);
+    overflow-y: auto;
 }
 
 #chooser>ul>li {
@@ -152,7 +168,7 @@ li.hasPreview>canvas {
 
 #customizeChar .buttons {
     display: block;
-    margin: 50px 0;
+    margin: 20px 0;
 }
 
 #github {
