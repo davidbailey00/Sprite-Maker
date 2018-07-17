@@ -9,12 +9,11 @@
 
 body {
     margin: 10px 15px;
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: lightgrey;
 }
 
 a {
-    color: darkred;
+    color: darkblue;
     text-decoration: none;
 }
 a:hover {
